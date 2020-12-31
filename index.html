@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Covid-19</title>
+  <meta name="description" content="My first PWA" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#039BE5" />
+</head>
+
+<body>
+  <!-- Navigasi -->
+  <nav class="light-blue darken-1" role="navigation">
+    <div class="nav-wrapper container title">
+      <a href="#" class="brand-logo" id="logo-container">Covid-19</a>
+      <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+      <ul class="topnav right hide-on-med-and-down"></ul>
+      <ul class="sidenav" id="nav-mobile"></ul>
+    </div>
+  </nav>
+  <!-- Akhir Navigasi -->
+  <div class="container" id="body-content"></div>
+
+  <!-- footer -->
+  <footer class="page-footer light-blue darken-1">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m12 center">
+          <a href="https://github.com/febriwijaya" class="big" target="_blank"><img src="asset/github.png" alt="github"
+              class="responsive-img"></a>
+          <a href="https://facebook.com/febriwijayagalung" class="big" target="_blank"><img src="asset/facebook.png"
+              alt="facebook" class="responsive-img"></a>
+          <a href="https://instagram.com/febri_wij" class="big" target="_blank"><img src="asset/instagram.png"
+              alt="instagram" class="responsive-img"></a>
+          <p class="title">Builth by Febri wijaya Hutagalung &copy; 2020</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- akhir footer -->
+
+  <script src="js/materialize.min.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    // MENDAFTARKAN SERVICE WORKER
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then(function () {
+            console.log("Pendaftaran ServiceWorker berhasil");
+          })
+          .catch(function () {
+            console.log("Pendaftaran ServiceWorker gagal");
+          });
+      });
+    } else {
+      console.log("ServiceWorker belum didukung browser ini");
+    }
+  </script>
+</body>
+
+</html>

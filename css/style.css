@@ -1,0 +1,31 @@
+.title {
+  font-family: 'Lobster',
+    cursive;
+}
+
+footer {
+  min-height: 300px;
+}
+
+.big {
+  font-size: 100px;
+  text-decoration: none;
+  color: aliceblue;
+  margin: 0 10px;
+}
+
+.mt-3 {
+  margin-top: 3em;
+}
+
+p {
+  text-indent: 30px;
+}
+
+.justify {
+  text-align: justify;
+}
+
+h6 {
+  font-weight: bold;
+}
